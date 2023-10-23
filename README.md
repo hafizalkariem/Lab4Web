@@ -238,5 +238,211 @@ Dalam Ketentuan tugas tersebut kita disuruh untuk membuat layout baru untuk menu
 <b>Hasilnya</b>
 ![Screenshot 2023-10-22 210107](https://github.com/hafizalkariem/ProjectUAS/assets/115614957/7c8638f5-5cf9-4666-9e70-02d4b79a84ad)
 
+## Kontak Menu
+
+<h2 align="center"> HTML </h2>
+
+```html
+<div id="contact-container">
+        <div class="contact-content">
+          <div class="contact-person">
+            <h1>contact</h1>
+            <p>ahmadhapiz224@gmail.com</p>
+            <p>+6282226221535</p>
+            <p>Bekasi, Jawa Barat</p>
+          </div>
+          <div class="contact-form">
+            <h1>Pesan & Saran</h1>
+            <section>
+              <form action="form.php" method="post">
+                <p>
+                  <label for="nama">Nama</label>
+                  <input type="text" id="nama" name="nama" />
+                </p>
+                <p>
+                  <label for="alamat email">Email</label>
+                  <input type="email" id="Email" name="Email" />
+                </p>
+                <p>
+                  <label for="message">message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </p>
+                <p><input type="submit" value="kirim" /></p>
+              </form>
+            </section>
+          </div>
+          <div class="contact-visit">
+            <h1>Visit</h1>
+            <div class="visit-youtube">
+              <p>Always visit my youtube channel</p>
+              <a
+                href="https://www.youtube.com/channel/UC_6t_LNvrYb0MQFlBLbvGwg"
+              >
+                <img src="Youtube_logo.png" alt="logo youtube" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+```
+
+<h2 align="center"> CSS </h2>
+
+
+```css
+#contact-container {
+  position: relative;
+  margin-left: 260px;
+  width: 1089px;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(DSC08724.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1; /* Ubah z-index ke 1 */
+}
+
+#contact-container::before {
+  content: "";
+  background-image: url(DSC08724.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 0; /* Ubah z-index ke 0 */
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  position: center;
+  height: 100vh;
+  align-items: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.contact-content h1 {
+  margin-bottom: 20px;
+}
+.contact-content p {
+  margin-bottom: 20px;
+}
+
+.contact-content h1 {
+  font-size: 40px;
+  color: white;
+}
+.contact-content p {
+  color: #ffffff;
+}
+.contact-person .contact-form .contact-visit {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* contact person start */
+.contact-person {
+  text-align: center;
+  margin-top: 100px;
+}
+.contact-person h1 .contact-person p {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.contact-person h1 {
+  margin-bottom: 40px;
+}
+.contact-person p {
+  margin: 40px;
+  color: white;
+}
+
+/* contact person end */
+
+/* pesan dan saran start */
+.contact-form {
+  margin-top: 100px;
+}
+.contact-message section form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.contact-message label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contact-form p {
+  margin: 20px;
+  min-width: 300px;
+}
+.contact-form h1 {
+  text-align: center;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+}
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* pesan dan saran end */
+
+/* visit start */
+
+.contact-visit {
+  text-align: center;
+  margin-top: 100px;
+  margin-right: 40px;
+}
+.visit-youtube img {
+  width: 100px;
+  height: 50px;
+}
+
+/* visi end */
+
+```
+
+<b>Hasilnya</b>
+
+![Screenshot 2023-10-23 231302](https://github.com/hafizalkariem/ProjectUAS/assets/115614957/60680bad-30bc-4499-8e77-384010626479)
+
 
 
