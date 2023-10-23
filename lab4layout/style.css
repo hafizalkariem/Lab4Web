@@ -8,6 +8,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   line-height: 1;
   font-size: 100%;
@@ -321,8 +324,9 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  z-index: -1;
+  z-index: 1; /* Ubah z-index ke 1 */
 }
+
 #contact-container::before {
   content: "";
   background-image: url(DSC08724.jpg);
@@ -334,18 +338,28 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: -1;
+  z-index: 0; /* Ubah z-index ke 0 */
 }
+
 .contact-content {
   display: flex;
   justify-content: space-between;
-  margin: 20px 20px;
+  position: center;
+  height: 100vh;
   align-items: flex-start;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  z-index: 1;
+  z-index: 2;
 }
+
+.contact-content h1 {
+  margin-bottom: 20px;
+}
+.contact-content p {
+  margin-bottom: 20px;
+}
+
 .contact-content h1 {
   font-size: 40px;
   color: white;
@@ -357,9 +371,11 @@ footer {
   flex: 1;
   margin: 0 10px;
 }
+
 /* contact person start */
 .contact-person {
   text-align: center;
+  margin-top: 100px;
 }
 .contact-person h1 .contact-person p {
   display: inline-block;
@@ -377,6 +393,9 @@ footer {
 /* contact person end */
 
 /* pesan dan saran start */
+.contact-form {
+  margin-top: 100px;
+}
 .contact-message section form {
   display: flex;
   flex-direction: column;
@@ -393,6 +412,7 @@ footer {
 }
 .contact-form p {
   margin: 20px;
+  min-width: 300px;
 }
 .contact-form h1 {
   text-align: center;
@@ -422,3 +442,17 @@ input[type="submit"]:hover {
   background-color: #0056b3;
 }
 /* pesan dan saran end */
+
+/* visit start */
+
+.contact-visit {
+  text-align: center;
+  margin-top: 100px;
+  margin-right: 40px;
+}
+.visit-youtube img {
+  width: 100px;
+  height: 50px;
+}
+
+/* visi end */
