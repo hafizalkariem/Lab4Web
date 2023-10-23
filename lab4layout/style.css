@@ -192,8 +192,8 @@ footer {
   width: 260px;
   min-height: 100vh;
   box-shadow: 0 0 1em #cccccc;
-  /* background-image: linear-gradient(to top, #fffcfc, #77777c); */
   background-image: linear-gradient(240deg, #b8b3b3, #dadde2, #f3f5f9);
+  z-index: 9999;
 }
 .about-img {
   justify-content: center;
@@ -312,7 +312,7 @@ footer {
 
 /* contact  */
 #contact-container {
-  position: absolute;
+  position: relative;
   margin-left: 260px;
   width: 1089px;
   height: 100vh;
@@ -321,27 +321,30 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
-#contact-container ::before {
+#contact-container::before {
   content: "";
   background-image: url(DSC08724.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: -1;
-  backdrop-filter: blur(10px);
 }
 .contact-content {
   display: flex;
   justify-content: space-between;
   margin: 20px 20px;
   align-items: flex-start;
-  z-index: 100;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1;
 }
 .contact-content h1 {
   font-size: 40px;
